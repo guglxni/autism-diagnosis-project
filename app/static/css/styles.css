@@ -1,0 +1,110 @@
+/* Light Mode (Default) */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background */
+    color: #333; /* Light text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container, .result-container {
+    margin: 50px auto;
+    max-width: 800px;
+    background: #fff; /* Light container background */
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode */
+body[data-theme='dark'] {
+    background-color: #121212; /* Dark background */
+    color: #eee; /* Light text for contrast */
+}
+
+body[data-theme='dark'] .container,
+body[data-theme='dark'] .result-container {
+    background: #1e1e1e;
+    color: #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Default blue for buttons */
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+body[data-theme='dark'] .btn {
+    background-color: #444444;
+    color: #eee;
+}
+
+body[data-theme='dark'] .btn:hover {
+    background-color: #666666;
+}
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+body[data-theme='dark'] .alert-success {
+    background-color: #155724;
+    color: #d4edda;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+body[data-theme='dark'] .alert-danger {
+    background-color: #721c24;
+    color: #f8d7da;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+body[data-theme='dark'] .alert-warning {
+    background-color: #856404;
+    color: #fff3cd;
+}
+
+/* Theme Toggle Button Styling */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body[data-theme='dark'] #theme-toggle {
+    background: #444;
+    color: #eee;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result</title>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <script src="/static/js/theme.js" defer></script>
+</head>
+<body>
+    <div class="result-container">
+        <header>
+    <h1>Assessment Result</h1>
+    <button id="theme-toggle" class="btn">Switch to Dark Mode</button>
+        </header>
+
+        <div class="result-message">
+            {% if result == "Low Risk" %}
+                <div class="alert alert-success">
+                    <p>Your baby is at <strong>Low Risk of Autism</strong>. Keep monitoring their development and progress for healthy growth.</p>
+                </div>
+            {% elif result == "High Risk" %}
+                <div class="alert alert-danger">
+                    <p>Your baby is at <strong>High Risk of Autism</strong>. We recommend consulting a healthcare professional for further evaluation.</p>
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    <p>No assessment result was generated. Please try again or contact support for help.</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <a href="/" class="btn">Go Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Risk Assessment</title>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <script src="/static/js/theme.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+    <h1>Autism Risk Assessment for Babies</h1>
+    <p>Please answer the following behavioral questions accurately to help assess the autism risk for your baby.</p>
+    <button id="theme-toggle" class="btn">Switch to Dark Mode</button>
+        </header>
+
+        <form id="assessment-form" method="post" action="/predict">
+            <!-- Section: Behavioral Questions (0-6 Months) -->
+            <section>
+                <h2>Behavioral Questions: 0-6 Months</h2>
+                <div class="parameter">
+                    <label>Sucks finger when placed between lips?</label>
+                    <div class="choices">
+                        <input type="radio" name="Sucks_Finger" value="1" required> Yes
+                        <input type="radio" name="Sucks_Finger" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Coordinates sucking, swallowing, and breathing?</label>
+                    <div class="choices">
+                        <input type="radio" name="Coordinates_Swallowing" value="1" required> Yes
+                        <input type="radio" name="Coordinates_Swallowing" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Opens and closes mouth in response to food stimulus?</label>
+                    <div class="choices">
+                        <input type="radio" name="Food_Stimulus" value="1" required> Yes
+                        <input type="radio" name="Food_Stimulus" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Eyes follow a moving object?</label>
+                    <div class="choices">
+                        <input type="radio" name="Eyes_Follow" value="1" required> Yes
+                        <input type="radio" name="Eyes_Follow" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Watches own hand?</label>
+                    <div class="choices">
+                        <input type="radio" name="Watches_Hand" value="1" required> Yes
+                        <input type="radio" name="Watches_Hand" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Raises head/shoulders from a face-down position?</label>
+                    <div class="choices">
+                        <input type="radio" name="Raises_Head" value="1" required> Yes
+                        <input type="radio" name="Raises_Head" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Clenches fist?</label>
+                    <div class="choices">
+                        <input type="radio" name="Fist_Clench" value="1" required> Yes
+                        <input type="radio" name="Fist_Clench" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Puts everything in mouth?</label>
+                    <div class="choices">
+                        <input type="radio" name="Puts_Mouth" value="1" required> Yes
+                        <input type="radio" name="Puts_Mouth" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Clenches immediately when something is placed in the palm?</label>
+                    <div class="choices">
+                        <input type="radio" name="Grasps_Object" value="1" required> Yes
+                        <input type="radio" name="Grasps_Object" value="0"> No
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Behavioral Questions (6-12 Months) -->
+            <section>
+                <h2>Behavioral Questions: 6-12 Months</h2>
+                <div class="parameter">
+                    <label>Eats mashed food?</label>
+                    <div class="choices">
+                        <input type="radio" name="Mashed_Food" value="1" required> Yes
+                        <input type="radio" name="Mashed_Food" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Holds own bottle?</label>
+                    <div class="choices">
+                        <input type="radio" name="Holds_Bottle" value="1" required> Yes
+                        <input type="radio" name="Holds_Bottle" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Swallows with mouth closed?</label>
+                    <div class="choices">
+                        <input type="radio" name="Swallows_Closed" value="1" required> Yes
+                        <input type="radio" name="Swallows_Closed" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Crawls and creeps?</label>
+                    <div class="choices">
+                        <input type="radio" name="Crawls" value="1" required> Yes
+                        <input type="radio" name="Crawls" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Bounces when held standing?</label>
+                    <div class="choices">
+                        <input type="radio" name="Bounces" value="1" required> Yes
+                        <input type="radio" name="Bounces" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Claps hands?</label>
+                    <div class="choices">
+                        <input type="radio" name="Claps" value="1" required> Yes
+                        <input type="radio" name="Claps" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Attempts to play with tiny objects?</label>
+                    <div class="choices">
+                        <input type="radio" name="Plays_Tiny_Objects" value="1" required> Yes
+                        <input type="radio" name="Plays_Tiny_Objects" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Reaches and takes objects at a distance?</label>
+                    <div class="choices">
+                        <input type="radio" name="Reaches_Object" value="1" required> Yes
+                        <input type="radio" name="Reaches_Object" value="0"> No
+                    </div>
+                </div>
+                <div class="parameter">
+                    <label>Bangs objects on the table?</label>
+                    <div class="choices">
+                        <input type="radio" name="Bangs_Object" value="1" required> Yes
+                        <input type="radio" name="Bangs_Object" value="0"> No
+                    </div>
+                </div>
+            </section>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Assess Risk</button>
+        </form>
+    </div>
+</body>
+</html>
